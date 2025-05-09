@@ -47,49 +47,17 @@ venv\Scripts\activate
 source venv/bin/activate
 
 Install the dependencies:
-bashpip install -r requirements.txt
+bash pip install -r requirements.txt
 
 Create a .env file in the root directory:
 OPENAI_API_KEY=your_openai_api_key
 MODEL_NAME=gpt-3.5-turbo
 
 Run the application:
-bashpython -m app.main
+python main.py
 
-Open your browser and navigate to:
-http://localhost:8000
-
-
-Project Structure
-cocktail-advisor/
-├── app/
-│   ├── __init__.py
-│   ├── main.py              # FastAPI entry point
-│   ├── config.py            # Configuration settings
-│   ├── db/
-│   │   ├── __init__.py
-│   │   ├── vector_store.py  # Vector DB implementation
-│   │   └── models.py        # Data models
-│   ├── llm/
-│   │   ├── __init__.py
-│   │   ├── engine.py        # LLM integration
-│   │   └── rag.py           # RAG implementation
-│   ├── utils/
-│   │   ├── __init__.py
-│   │   ├── cocktail_parser.py  # Parse cocktail dataset
-│   │   └── memory_handler.py   # Handle user preferences
-│   ├── static/
-│   │   ├── css/
-│   │   │   └── style.css
-│   │   └── js/
-│   │       └── chat.js
-│   └── templates/
-│       └── index.html       # Chat interface
-├── data/                    # Directory for cocktail dataset
-├── .env                     # Environment variables
-├── requirements.txt         # Dependencies
-└── README.md                # Project documentation
 Implementation Details
+
 RAG Architecture
 The application uses a Retrieval-Augmented Generation (RAG) architecture to enhance the LLM's responses:
 
