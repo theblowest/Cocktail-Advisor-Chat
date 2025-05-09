@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Advisor Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cocktail"></i> Cocktail Advisor Chat</h1>
+            <p>Ask me anything about cocktails, share your preferences, or get recommendations!</p>
+        </header>
+        
+        <div class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <!-- Welcome message -->
+                <div class="message assistant">
+                    <div class="avatar"><i class="fas fa-robot"></i></div>
+                    <div class="content">
+                        <p>Welcome to the Cocktail Advisor Chat! I'm here to help you discover amazing cocktails.</p>
+                        <p>You can:</p>
+                        <ul>
+                            <li>Ask about cocktails containing specific ingredients</li>
+                            <li>Tell me about your favorite ingredients</li>
+                            <li>Get recommendations based on your preferences</li>
+                            <li>Learn about cocktail recipes and preparation methods</li>
+                        </ul>
+                        <p>What would you like to know today?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message here..." aria-label="Type your message">
+                <button id="send-button" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            
+            <div class="suggestions">
+                <p>Try asking:</p>
+                <div class="suggestion-buttons">
+                    <button class="suggestion" data-message="What are the 5 cocktails containing lemon?">Cocktails with lemon</button>
+                    <button class="suggestion" data-message="What are the 5 non-alcoholic cocktails containing sugar?">Non-alcoholic with sugar</button>
+                    <button class="suggestion" data-message="I love rum and tequila, they're my favorite ingredients!">Share preferences</button>
+                    <button class="suggestion" data-message="Recommend 5 cocktails that contain my favorite ingredients">Get recommendations</button>
+                    <button class="suggestion" data-message="Recommend a cocktail similar to 'Hot Creamy Bush'">Similar cocktails</button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 Cocktail Advisor - A Python ML Engineer Test Project</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', path='/js/chat.js') }}"></script>
+</body>
+</html>
